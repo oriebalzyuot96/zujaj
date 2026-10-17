@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-zujaj-theme="yarmouk-teal" data-text-size="m">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>زجاج ثلاثي الأبعاد · Zujaj 3D</title>
+  <meta name="description" content="زجاج بالأبعاد الثلاثة: «حصوة»، مخلوق صغير من زجاج قزحي مصنفر، وحصى زجاجية حقيقية الانكسار تطفو فوق أرض عاكسة. Zujaj 3D: an iridescent frosted glass creature and glass pebbles in three.js.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#cfe6e6">
+  <meta name="author" content="Orieb Alzyuot">
+  <link rel="canonical" href="https://oriebalzyuot96.github.io/zujaj/3d/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Zujaj · زجاج">
+  <meta property="og:title" content="Zujaj 3D · زجاج ثلاثي الأبعاد">
+  <meta property="og:description" content="Hasawa, a small creature of iridescent frosted glass, and glass pebbles with real refraction, rendered live with three.js.">
+  <meta property="og:url" content="https://oriebalzyuot96.github.io/zujaj/3d/">
+  <meta property="og:image" content="https://oriebalzyuot96.github.io/zujaj/og-3d.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A small iridescent glass creature waving among floating glass pebbles on a dark reflective floor">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://oriebalzyuot96.github.io/zujaj/og-3d.png">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Reem+Kufi:wght@500;600;700&display=swap">
+  <script type="module" crossorigin src="/zujaj/assets/page3d-Bs72wMxE.js"></script>
+  <link rel="modulepreload" crossorigin href="/zujaj/assets/common-JqeaCk4n.js">
+  <link rel="stylesheet" crossorigin href="/zujaj/assets/common-BVF0JHXb.css">
+</head>
+<body class="page-3d" data-title-ar="زجاج ثلاثي الأبعاد · Zujaj 3D" data-title-en="Zujaj 3D · زجاج ثلاثي الأبعاد" data-page="3d">
+  <a class="skip" href="#main" data-i18n="skip">انتقل إلى المحتوى</a>
+
+  <header class="topbar">
+    <a class="brand" href="../" aria-label="Zujaj">
+      <span class="brand-mark" data-zujaj="brand-mark" data-zujaj-wear="0.7" data-zujaj-radius="12" aria-hidden="true"></span>
+      <span class="brand-word"><span data-i18n="brand">زجاج</span><small>Zujaj</small></span>
+    </a>
+    <nav class="nav" aria-label="الأقسام" data-i18n-attr="aria-label:navLabel">
+      <a href="../#playground" data-i18n="navPlay">الملعب</a>
+      <a href="../#panel" data-i18n="navPanel">لوحة التحكم</a>
+      <a href="../#flow" data-i18n="navFlow">مسار العمل</a>
+      <a href="../#gallery" data-i18n="navGallery">المعرض</a>
+      <a href="../#dynamic" data-i18n="navDynamic">ألوانك</a>
+      <a href="./" aria-current="page" data-i18n="nav3d">ثلاثي الأبعاد</a>
+      <a href="../#about" data-i18n="navAbout">عن زجاج</a>
+    </nav>
+    <div class="topbar-actions">
+      <zujaj-button id="lang-toggle" seed="lang" class="icon-btn" lang="en" aria-label="English">EN</zujaj-button>
+      <zujaj-button id="open-settings" seed="settings" class="icon-btn" aria-label="الإعدادات" data-i18n-attr="aria-label:settings">
+        <svg slot="start" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>
+        <span class="hide-sm" data-i18n="settings">الإعدادات</span>
+      </zujaj-button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" aria-labelledby="t3d-title" style="padding-block-start: 40px">
+      <div class="section-head lede3d">
+        <h1 id="t3d-title" data-i18n="t3dTitle" style="font-size: clamp(1.9rem, 3vw + 1rem, 2.8rem); margin-block-end: 10px">زجاج بالأبعاد الثلاثة</h1>
+        <p data-i18n="t3dLede"></p>
+      </div>
+      <div class="stage3d" id="stage3d">
+        <canvas id="scene3d" role="img" tabindex="0" aria-label="" data-i18n-attr="aria-label:t3dCanvas" aria-describedby="desc3d"></canvas>
+        <span class="hint3d" data-i18n="polishHint" aria-hidden="true"></span>
+      </div>
+
+      <zujaj-surface class="panel3d" seed="panel3d" wear="0.08" radius="28" role="group" aria-labelledby="ctl3d-title">
+        <h2 id="ctl3d-title" class="sr-only" data-i18n="controls3d"></h2>
+        <div class="panel3d-grid">
+          <fieldset class="field" style="grid-column: 1 / -1">
+            <legend data-i18n="theme"></legend>
+            <div class="chips" id="t3-themes" role="radiogroup"></div>
+          </fieldset>
+          <div class="field">
+            <label for="t3-frost"><span data-i18n="frost"></span> <output id="t3-frost-out" for="t3-frost">0.30</output></label>
+            <input id="t3-frost" type="range" min="0" max="0.8" step="0.01" value="0.3">
+          </div>
+          <div class="field">
+            <label for="t3-wear"><span data-i18n="wear"></span> <output id="t3-wear-out" for="t3-wear">0.35</output></label>
+            <input id="t3-wear" type="range" min="0" max="1" step="0.01" value="0.35">
+          </div>
+          <div class="field">
+            <label for="t3-count"><span data-i18n="count"></span> <output id="t3-count-out" for="t3-count">8</output></label>
+            <input id="t3-count" type="range" min="3" max="14" step="1" value="8">
+          </div>
+          <fieldset class="field">
+            <legend data-i18n="backdrop"></legend>
+            <div class="chips" role="radiogroup" id="t3-bg">
+              <button type="button" class="chip" role="radio" data-value="dark" data-i18n="bgDark"></button>
+              <button type="button" class="chip" role="radio" data-value="light" data-i18n="bgLight"></button>
+            </div>
+          </fieldset>
+          <div class="field row" style="margin-block-start: 0">
+            <zujaj-button id="t3-shuffle" seed="t3-shuffle">
+              <svg slot="start" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h3c4 0 6 10 10 10h5M3 17h3c1.5 0 2.7-1.4 3.8-3.2M14.2 10.2C15.3 8.4 16.5 7 18 7h3M18 4l3 3-3 3M18 14l3 3-3 3"/></svg>
+              <span data-i18n="shuffle"></span>
+            </zujaj-button>
+            <zujaj-button id="t3-polish" seed="t3-polish" variant="accent"><span data-i18n="polishAll"></span></zujaj-button>
+          </div>
+        </div>
+        <p class="sr-only" role="status" id="t3-status"></p>
+      </zujaj-surface>
+      <p class="desc3d" id="desc3d" data-i18n="t3dDesc"></p>
+      <p class="desc3d"><a href="../" data-i18n="back2d"></a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><span data-i18n="footer"></span> · <a href="https://oriebalzyuot96.github.io">Orieb Alzyuot</a></p>
+  </footer>
+
+</body>
+</html>
